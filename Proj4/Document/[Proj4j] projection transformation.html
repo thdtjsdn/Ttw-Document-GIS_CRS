@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!-- saved from url=(0058)http://www.osgeo.org/pipermail/proj4j/2010-May/000045.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+   <title> [Proj4j] projection transformation
+   </title>
+   <link rel="Index" href="http://www.osgeo.org/pipermail/proj4j/2010-May/index.html">
+   <link rel="made" href="mailto:proj4j%40lists.osgeo.org?Subject=%5BProj4j%5D%20projection%20transformation&In-Reply-To=4C0030D0.2050604%40refractions.net">
+   <meta name="robots" content="index,nofollow">
+   
+   <link rel="Previous" href="http://www.osgeo.org/pipermail/proj4j/2010-May/000044.html">
+   <link rel="Next" href="http://www.osgeo.org/pipermail/proj4j/2010-May/000046.html">
+ <script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+ <body bgcolor="#ffffff">
+   <h1>[Proj4j] projection transformation</h1>
+    <b>ahmet temiz</b> 
+    <a href="mailto:proj4j%40lists.osgeo.org?Subject=%5BProj4j%5D%20projection%20transformation&In-Reply-To=4C0030D0.2050604%40refractions.net" title="[Proj4j] projection transformation">ahmettemiz88 at gmail.com
+       </a><br>
+    <i>Sat May 29 05:03:38 EDT 2010</i>
+    <p></p><ul>
+        <li>Previous message: <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/000044.html">[Proj4j] projection transformation
+</a></li>
+        <li>Next message: <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/000046.html">[Proj4j] An approach to working together
+</a></li>
+         <li> <b>Messages sorted by:</b> 
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/date.html#45">[ date ]</a>
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/thread.html#45">[ thread ]</a>
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/subject.html#45">[ subject ]</a>
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/author.html#45">[ author ]</a>
+         </li>
+       </ul>
+    <hr>  
+<!--beginarticle-->
+<pre>thank you
+
+&#305; will be standing by
+
+2010/5/29 Martin Davis &lt;<a href="http://lists.osgeo.org/mailman/listinfo/proj4j">mbdavis at refractions.net</a>&gt;:
+&gt;<i> Ok, I'll work on this ASAP.
+</i>&gt;<i>
+</i>&gt;<i> Martin
+</i>&gt;<i>
+</i>&gt;<i> ahmet temiz wrote:
+</i>&gt;&gt;<i>
+</i>&gt;&gt;<i> thank you
+</i>&gt;&gt;<i>
+</i>&gt;&gt;<i> I prefer second option. Could you send it if possible ?
+</i>&gt;&gt;<i>
+</i>&gt;&gt;<i> regards
+</i>&gt;&gt;<i>
+</i>&gt;&gt;<i> 2010/5/27 Martin Davis &lt;<a href="http://lists.osgeo.org/mailman/listinfo/proj4j">mtnclimb at gmail.com</a>&gt;:
+</i>&gt;&gt;<i>
+</i>&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;<i> Ahmet,
+</i>&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;<i> Unfortunately at this point there isn't an available distribution of
+</i>&gt;&gt;&gt;<i> Proj4J in compiled form. &nbsp;You have two choices:
+</i>&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;<i> 1. download the project source files and compile it yourself (there is
+</i>&gt;&gt;&gt;<i> an Ant script that does this)
+</i>&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;<i> 2. If #1 is not an option possibly I can provide you with a compiled jar
+</i>&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;<i> Martin
+</i>&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;<i> On Thu, May 27, 2010 at 4:14 AM, ahmet temiz &lt;<a href="http://lists.osgeo.org/mailman/listinfo/proj4j">ahmettemiz88 at gmail.com</a>&gt;
+</i>&gt;&gt;&gt;<i> wrote:
+</i>&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;<i> thank you
+</i>&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;<i> where can I find related "jar" file ?
+</i>&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;<i> regards
+</i>&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;<i> 2010/5/26 Martin Davis &lt;<a href="http://lists.osgeo.org/mailman/listinfo/proj4j">mtnclimb at gmail.com</a>&gt;:
+</i>&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> Here's some sample code to do this (this code is also now in the
+</i>&gt;&gt;&gt;&gt;&gt;<i> ExampleTest file in SVN)
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp;public void testExplicitTransform()
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp;{
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; String csName1 = "EPSG:32636";
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; String csName2 = "EPSG:4326";
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; CoordinateTransformFactory ctFactory = new
+</i>&gt;&gt;&gt;&gt;&gt;<i> CoordinateTransformFactory();
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; CRSFactory csFactory = new CRSFactory();
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; /*
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;* Create {@link CoordinateReferenceSystem} &amp;
+</i>&gt;&gt;&gt;&gt;&gt;<i> CoordinateTransformation.
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;* Normally this would be carried out once and reused for all
+</i>&gt;&gt;&gt;&gt;&gt;<i> transformations
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;*/
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; CoordinateReferenceSystem crs1 = csFactory.createFromName(csName1);
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; CoordinateReferenceSystem crs2 = csFactory.createFromName(csName2);
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; CoordinateTransform trans = ctFactory.createTransform(crs1, crs2);
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; /*
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;* Create input and output points.
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;* These can be constructed once per thread and reused.
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;*/
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; ProjCoordinate p1 = new ProjCoordinate();
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; ProjCoordinate p2 = new ProjCoordinate();
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; p1.x = 500000;
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; p1.y = 4649776.22482;
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; /*
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;* Transform point
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; &nbsp;*/
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; trans.transform(p1, p2);
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp; assertTrue(isInTolerance(p2, 33, 42, 0.000001));
+</i>&gt;&gt;&gt;&gt;&gt;<i> &nbsp;}
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;<i> On Sun, May 23, 2010 at 11:33 AM, ahmet temiz &lt;<a href="http://lists.osgeo.org/mailman/listinfo/proj4j">ahmettemiz88 at gmail.com</a>&gt;
+</i>&gt;&gt;&gt;&gt;&gt;<i> wrote:
+</i>&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i> hello
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i> how can I transform utm epsg :32636 values to epsg:4326
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i> regards
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i> _______________________________________________
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i> Proj4j mailing list
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i> <a href="http://lists.osgeo.org/mailman/listinfo/proj4j">Proj4j at lists.osgeo.org</a>
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i> <a href="http://lists.osgeo.org/mailman/listinfo/proj4j">http://lists.osgeo.org/mailman/listinfo/proj4j</a>
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</i>&gt;&gt;<i>
+</i>&gt;&gt;<i> _______________________________________________
+</i>&gt;&gt;<i> Proj4j mailing list
+</i>&gt;&gt;<i> <a href="http://lists.osgeo.org/mailman/listinfo/proj4j">Proj4j at lists.osgeo.org</a>
+</i>&gt;&gt;<i> <a href="http://lists.osgeo.org/mailman/listinfo/proj4j">http://lists.osgeo.org/mailman/listinfo/proj4j</a>
+</i>&gt;&gt;<i>
+</i>&gt;&gt;<i>
+</i>&gt;<i>
+</i>&gt;<i> --
+</i>&gt;<i> Martin Davis
+</i>&gt;<i> Senior Technical Architect
+</i>&gt;<i> Refractions Research, Inc.
+</i>&gt;<i> (250) 383-3022
+</i>&gt;<i>
+</i>&gt;<i>
+</i></pre>
+
+
+<!--endarticle-->
+    <hr>
+    <p></p><ul>
+        <!--threads-->
+	<li>Previous message: <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/000044.html">[Proj4j] projection transformation
+</a></li>
+	<li>Next message: <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/000046.html">[Proj4j] An approach to working together
+</a></li>
+         <li> <b>Messages sorted by:</b> 
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/date.html#45">[ date ]</a>
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/thread.html#45">[ thread ]</a>
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/subject.html#45">[ subject ]</a>
+              <a href="http://www.osgeo.org/pipermail/proj4j/2010-May/author.html#45">[ author ]</a>
+         </li>
+       </ul>
+
+<hr>
+<a href="http://lists.osgeo.org/mailman/listinfo/proj4j">More information about the Proj4j
+mailing list</a><br>
+
+</body></html>
